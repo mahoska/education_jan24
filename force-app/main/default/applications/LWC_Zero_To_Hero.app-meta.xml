@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#6D757B</headerColor>
+        <logo>LWC_transparent</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>LWC Zero To Hero</label>
+    <navType>Standard</navType>
+    <tabs>QuizApp</tabs>
+    <tabs>Componens_Communication</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>LWC_Zero_To_Hero_UtilityBar</utilityBar>
+</CustomApplication>
