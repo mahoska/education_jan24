@@ -7,7 +7,17 @@
                 <identifier>c_p2cParentComponent2</identifier>
             </componentInstance>
         </itemInstances>
-        <name>column1</name>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>AuraLwcCommunication</componentName>
+                <identifier>c_AuraLwcCommunication</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region2</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -29,12 +39,12 @@
                 <identifier>c_pubsubComponentB</identifier>
             </componentInstance>
         </itemInstances>
-        <name>column2</name>
+        <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>Componens Communication</masterLabel>
     <template>
-        <name>flexipage:appHomeTemplateTwoColumns</name>
+        <name>flexipage:appHomeTemplateThreeColumns</name>
     </template>
     <type>AppPage</type>
 </FlexiPage>

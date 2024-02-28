@@ -15,6 +15,7 @@
     <navType>Standard</navType>
     <tabs>QuizApp</tabs>
     <tabs>Componens_Communication</tabs>
+    <tabs>Setter_Slot_Aura_Coexistence</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Zero_To_Hero_UtilityBar</utilityBar>
 </CustomApplication>
