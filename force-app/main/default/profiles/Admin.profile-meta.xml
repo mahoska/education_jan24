@@ -6,8 +6,16 @@
         <visible>true</visible>
     </applicationVisibilities>
     <custom>false</custom>
+    <pageAccesses>
+        <apexPage>lmsVisualForceDemo</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
     <tabVisibilities>
         <tab>Componens_Communication</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Lightning_Message_Service</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
