@@ -32,6 +32,7 @@
     <label>LWC Zero To Hero</label>
     <navType>Standard</navType>
     <tabs>QuizApp</tabs>
+    <tabs>Memory_Game</tabs>
     <tabs>Lightning_Message_Service</tabs>
     <tabs>Componens_Communication</tabs>
     <tabs>Setter_Slot_Aura_Coexistence</tabs>

@@ -19,6 +19,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Memory_Game</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>QuizApp</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
