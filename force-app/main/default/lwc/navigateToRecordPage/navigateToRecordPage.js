@@ -6,7 +6,7 @@ export default class NavigateToRecordPage extends NavigationMixin(LightningEleme
         this[NavigationMixin.Navigate]({
             type:'standard__recordPage',
             attributes:{
-                recordId:'003JW00000AhxAyYAJ',
+                recordId:'003av0000009J54AAE',
                 objectApiName:'Contact',
                 actionName:'view'
             }
@@ -17,7 +17,7 @@ export default class NavigateToRecordPage extends NavigationMixin(LightningEleme
         this[NavigationMixin.Navigate]({
             type:'standard__recordPage',
             attributes:{
-                recordId:'003JW00000AhxAyYAJ',
+                recordId:'003av0000009J54AAE',
                 objectApiName:'Contact',
                 actionName:'edit'
             }

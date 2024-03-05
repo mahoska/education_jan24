@@ -6,7 +6,7 @@ export default class NavigateToRelatedRelationship extends NavigationMixin(Light
         this[NavigationMixin.Navigate]({
             type:'standard__recordRelationshipPage',
             attributes:{
-                recordId:'001JW00000C3oHjYAJ',
+                recordId:'001av000000LgM3AAK',
                 objectApiName:'Account',
                 relationshipApiName:'Contacts',
                 actionName:'view'
