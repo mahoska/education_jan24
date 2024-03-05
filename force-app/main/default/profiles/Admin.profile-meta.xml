@@ -10,6 +10,10 @@
         <apexPage>lmsVisualForceDemo</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <pageAccesses>
+        <apexPage>navigateVfpage</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
     <tabVisibilities>
         <tab>Componens_Communication</tab>
         <visibility>DefaultOn</visibility>
@@ -20,6 +24,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Memory_Game</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Navigation_Service</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
