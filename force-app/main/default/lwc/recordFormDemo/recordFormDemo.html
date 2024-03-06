@@ -1,0 +1,58 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-06-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="Create record using lightning-record-form">
+        <lightning-record-form 
+            object-api-name={objectName}
+            fields={fieldList}
+            onsuccess={successHandler}
+        ></lightning-record-form>
+    </lightning-card>
+
+    <template lwc:if={createdAccountId}>
+        <lightning-card title="Display record using lightning-record-form">
+            <lightning-record-form 
+                record-id={createdAccountId}
+                object-api-name={objectName}
+                fields={fieldList}
+            ></lightning-record-form>
+        </lightning-card>
+    
+        <lightning-card title="Display record in readonly mode using lightning-record-form">
+            <lightning-record-form 
+                record-id={createdAccountId}
+                object-api-name={objectName}
+                fields={fieldList}
+                mode="readonly"
+            ></lightning-record-form>
+        </lightning-card>
+   
+        <lightning-card title="Edit record using lightning-record-form">
+            <lightning-record-form 
+                record-id={createdAccountId}
+                object-api-name={objectName}
+                fields={fieldList}
+                mode="edit"
+                columns="2"
+            ></lightning-record-form>
+        </lightning-card>
+    </template>
+
+    <!--for record page-->
+    <template lwc:if={recordId}>
+        <lightning-card title="Edit record with layout using lightning-record-form">
+            <lightning-record-form 
+                record-id={recordId}
+                object-api-name={objectApiName}
+                mode="edit"
+                columns="2"
+                layout-type="Compact"
+            ></lightning-record-form>
+        </lightning-card>
+    </template>
+</template>

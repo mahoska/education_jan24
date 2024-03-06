@@ -10,6 +10,14 @@
         <apexPage>lmsVisualForceDemo</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <pageAccesses>
+        <apexPage>navigateVfpage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <tabVisibilities>
+        <tab>Base_Components</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>Componens_Communication</tab>
         <visibility>DefaultOn</visibility>
@@ -20,6 +28,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Memory_Game</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Navigation_Service</tab>
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -183,10 +195,10 @@
         <enabled>true</enabled>
         <name>CreateTopics</name>
     </userPermissions>
-    <!--userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>CreateWorkBadgeDefinition</name>
-    </userPermissions-->
+    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>CreateWorkspaces</name>
@@ -299,10 +311,10 @@
         <enabled>true</enabled>
         <name>ExportReport</name>
     </userPermissions>
-    <!--userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>FieldServiceAccess</name>
-    </userPermissions-->
+    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>GiveRecognitionBadge</name>
@@ -599,10 +611,10 @@
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
     </userPermissions>
-    <!--userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>SendExternalEmailAvailable</name>
-    </userPermissions-->
+    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>SendSitRequests</name>

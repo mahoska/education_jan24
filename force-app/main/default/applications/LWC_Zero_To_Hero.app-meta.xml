@@ -38,6 +38,7 @@
     <tabs>Setter_Slot_Aura_Coexistence</tabs>
     <tabs>Static_Resources_Context_and_Toast</tabs>
     <tabs>Navigation_Service</tabs>
+    <tabs>Base_Components</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Zero_To_Hero_UtilityBar</utilityBar>
 </CustomApplication>
