@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-07-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="getObjectInfo Adapter Demo">
+        <div class="slds-p-around_medium">
+            <template lwc:if={objectInfo.data}>
+                <div>defaultRecordTypeId: {objectInfo.data.defaultRecordTypeId}</div>
+                <div>object API Name: {objectInfo.data.apiName}</div>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="getObjectInfos Adapter Demo">
+        <div class="slds-p-around_medium">
+            <template lwc:if={objectInfos}>
+                    <template for:each={objectInfos.results} for:item="obj">
+                        <div key={obj.result.apiNme}>
+                            <div>object API Name: {obj.result.apiName}</div>
+                            <div>defaultRecordTypeId: {obj.result.defaultRecordTypeId}</div>
+                        </div>
+                    </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

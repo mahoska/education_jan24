@@ -19,6 +19,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>CRUD_uiRecordAPi</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Componens_Communication</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -44,6 +48,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Static_Resources_Context_and_Toast</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Wire_Service</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>

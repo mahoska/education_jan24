@@ -39,6 +39,8 @@
     <tabs>Static_Resources_Context_and_Toast</tabs>
     <tabs>Navigation_Service</tabs>
     <tabs>Base_Components</tabs>
+    <tabs>Wire_Service</tabs>
+    <tabs>CRUD_uiRecordAPi</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Zero_To_Hero_UtilityBar</utilityBar>
 </CustomApplication>

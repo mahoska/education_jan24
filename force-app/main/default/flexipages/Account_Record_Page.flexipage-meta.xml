@@ -224,6 +224,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>getRecordDemo</componentName>
+                <identifier>c_getRecordDemo</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>recordIdAndObjectName</componentName>
                 <identifier>c_recordIdAndObjectName</identifier>
             </componentInstance>

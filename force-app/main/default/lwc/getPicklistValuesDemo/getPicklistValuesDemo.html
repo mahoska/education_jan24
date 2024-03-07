@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-07-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="getPicklistValues ">
+        <div class="slds-p-around_medium">
+                <lightning-combobox
+                    name="Industry"
+                    label="Industry"
+                    value={selectedIndustry}
+                    placeholder="Select Industry"
+                    options={industryOptions}
+                    onchange={handleChange} ></lightning-combobox>
+                    <p>selectedIndustry: {selectedIndustry}</p>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="Type"
+                label="Type"
+                value={selectedType}
+                placeholder="Select Type"
+                options={typeOptions}
+                onchange={handleTypeChange} ></lightning-combobox>
+                <p>selectedType: {selectedType}</p>
+    </div>
+    </lightning-card>
+</template>
