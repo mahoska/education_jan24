@@ -41,6 +41,7 @@
     <tabs>Base_Components</tabs>
     <tabs>Wire_Service</tabs>
     <tabs>CRUD_uiRecordAPi</tabs>
+    <tabs>Apex_in_LWC</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Zero_To_Hero_UtilityBar</utilityBar>
 </CustomApplication>

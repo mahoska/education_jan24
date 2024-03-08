@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-08-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="Apex Imperative Demo">
+        <div class="slds-p-around_medium">
+            <lightning-input type="search" onchange={searchHandler} label="Search Account" value={searchKey}></lightning-input>
+        </div>
+        <template lwc:if={accounts}>
+            <template for:each={accounts} for:item="account">
+                <div class="slds-box slds-box_xx-small" key={account.Id}>
+                    <p><strong>Name: </strong>{account.Name}</p>
+                    <p><strong>Type: </strong>{account.newType}</p>
+                    <p><strong>Industry: </strong>{account.Industry}</p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>

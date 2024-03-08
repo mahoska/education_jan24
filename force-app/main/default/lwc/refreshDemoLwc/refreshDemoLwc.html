@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-08-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="refresh apex Demo" >
+        <div class="slds-m-around_medium">
+            <template lwc:if={contact.data}>
+                <lightning-datatable 
+                key-field="Id"
+                data={contact.data}
+                columns={columns}
+                onsave={handleSave}
+                draft-values={draftValues}></lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>
