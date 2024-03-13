@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-12-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <div class="slds-box">
+        <template lwc:if={mapMarkers.length}>
+            <lightning-map map-markers={mapMarkers}
+            markers-title={markersTitle}
+            onmarkerselect={callMarkerHandler}
+            selected-marker-value={selectedMarkerValue}></lightning-map>
+        </template>
+        <template lwc:else>
+            <div >No Account Found</div>
+        </template>
+    </div>
+</template>

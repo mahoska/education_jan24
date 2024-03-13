@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-13-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="Client Side Filtering Demo">
+        <div class="slds-p-around_medium">
+            <lightning-layout >
+                <lightning-layout-item size="2" padding="around-small">
+                    <lightning-combobox name="filterBy" label="Filter By" value={filterBy} options={FilterByOptions} onchange={filterbyHandler}></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" padding="around-small">
+                    <lightning-input type="text" label="Filter" onkeyup={filterHandler}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" alignment-bump="left" padding="around-small">
+                    <lightning-combobox name="sortedBy" label="Sort By" value={sortedBy} options={sortByOptions} onchange={sortHandler}></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+            <table>
+                <thead>
+                    <tr>
+                        <template for:each={headings} for:item="heading">
+                            <th key={heading}>{heading}</th>
+                        </template>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={filteredData} for:item="data">
+                        <tr key={data}>
+                            <td>{data.Id}</td>
+                            <td>{data.Name}</td>
+                            <td>{data.Title}</td>
+                            <td>{data.Email}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

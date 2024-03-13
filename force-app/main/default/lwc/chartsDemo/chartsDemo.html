@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-13-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-card title="Total Opportunities 1">
+                <template lwc:if={pieChartLabels.length}>
+                    <c-charts 
+                    type="doughnut" 
+                    chart-heading="Opportunities"
+                    chart-data={pieChartData} 
+                    chart-labels={pieChartLabels}
+                    ></c-charts>
+                </template>
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-card title="Total Opportunities 2">
+                <template lwc:if={pieChartLabels.length}>
+                    <c-charts 
+                    type="doughnut" 
+                    chart-heading="Zero to Hero"
+                    chart-data={pieChartData} 
+                    chart-labels={pieChartLabels}
+                    ></c-charts>
+                </template>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
