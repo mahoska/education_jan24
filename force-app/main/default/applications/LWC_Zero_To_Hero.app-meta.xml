@@ -18,6 +18,24 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Account</pageOrSobjectType>
     </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contact_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contact_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
     <brand>
         <headerColor>#6D757B</headerColor>
         <logo>LWC_transparent</logo>
@@ -33,6 +51,8 @@
     <navType>Standard</navType>
     <tabs>QuizApp</tabs>
     <tabs>Memory_Game</tabs>
+    <tabs>Book_Listening_App</tabs>
+    <tabs>Fundamentals_Of_LWC</tabs>
     <tabs>Lightning_Message_Service</tabs>
     <tabs>Componens_Communication</tabs>
     <tabs>Setter_Slot_Aura_Coexistence</tabs>
@@ -42,6 +62,11 @@
     <tabs>Wire_Service</tabs>
     <tabs>CRUD_uiRecordAPi</tabs>
     <tabs>Apex_in_LWC</tabs>
+    <tabs>Maps_in_LWC</tabs>
+    <tabs>Filtering_And_Sorting_Demo</tabs>
+    <tabs>Charts_in_LWC</tabs>
+    <tabs>Reusable_Components</tabs>
+    <tabs>Custom_Carousel_Using_LWC</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Zero_To_Hero_UtilityBar</utilityBar>
 </CustomApplication>
