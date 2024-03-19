@@ -36,6 +36,14 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Contact</pageOrSobjectType>
     </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
     <brand>
         <headerColor>#6D757B</headerColor>
         <logo>LWC_transparent</logo>
@@ -49,6 +57,7 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>LWC Zero To Hero</label>
     <navType>Standard</navType>
+    <tabs>standard-home</tabs>
     <tabs>QuizApp</tabs>
     <tabs>Memory_Game</tabs>
     <tabs>Book_Listening_App</tabs>
