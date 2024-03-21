@@ -1,0 +1,52 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-20-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <!--
+    <lightning-card title="if:true and if:false basic demo">
+        <lightning-button label={getLabel} class="slds-var-m-around_small" onclick={showTextHandler}></lightning-button>
+        <template if:true={showText}>
+            Hello Friends
+        </template>
+        <template if:false={showText}>
+            ***********
+        </template>
+    </lightning-card>
+
+    <lightning-card title="lwc:if and lwc:else basic demo">
+        <lightning-button label={getLabel} class="slds-var-m-around_small" onclick={showTextHandler}></lightning-button>
+        <template lwc:if={showText}>
+            Hello Friends
+        </template>
+        <template lwc:else>
+            ***********
+        </template>
+    </lightning-card>
+-->
+<lightning-card title="if:true and if:false getter demo">
+    <lightning-input label="What country are you from?" class="slds-var-m-around_small" value={country} onclick={countryChangeHandler}></lightning-input>
+    <template if:true={isCountryUkraine}>
+        You are from Ukraine
+    </template>
+    <template if:false={isCountryUkraine}>
+        You are not from Ukraine
+    </template>
+</lightning-card>
+
+<lightning-card title="lwc:if and lwc:else getter demo">
+    <lightning-input label="What country are you from?" class="slds-var-m-around_small" value={newCountry} onclick={newcountryChangeHandler}></lightning-input>
+    <template lwc:if={isCountryUSA}>
+        You are from USA
+    </template>
+    <template lwc:elseif={isCountryCanada}>
+        You are from Canada
+    </template>
+    <template lwc:else>
+        You are not from USA
+    </template>
+</lightning-card>
+</template>

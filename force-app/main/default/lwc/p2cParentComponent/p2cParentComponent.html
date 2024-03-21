@@ -1,0 +1,44 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 02-27-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <c-p2c-alert-component 
+        card-heading="Parent to Child primitive data communication" 
+        message="Hi! I got some data!" 
+        is-validate
+    ></c-p2c-alert-component>
+    <div class="slds-var-m-bottom_medium"></div>
+    <c-p2c-carousel-component 
+        card-heading="Parent to Child non primitive data communication" 
+        carousel-items = {carouselData}
+    ></c-p2c-carousel-component>
+    <div class="slds-var-m-bottom_medium"></div>
+    <lightning-card title="Parent to Child communication on action" >
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="number"
+                label="Enter percentage"
+                onkeyup={changeHandler}
+                value={percentage}
+            ></lightning-input>
+            <div class="slds-var-m-top_medium">
+                <c-p2c-progress-component 
+                    progress-value = {percentage}
+                ></c-p2c-progress-component>
+            </div> 
+        </div>
+    </lightning-card>
+    <div class="slds-var-m-bottom_medium"></div>
+    <lightning-card title="Calling child method from parent">
+        <div class="slds-var-m-around_medium">
+            <div class="slds-var-m-bottom_medium">
+                <c-p2c-slider-component></c-p2c-slider-component>
+            </div>
+            <!---Example of Calling child Method from parent-->
+            <lightning-button variant="brand" label="Reset Slider" onclick={handleClick}></lightning-button>
+        </div> 
+     </lightning-card>
+</template>

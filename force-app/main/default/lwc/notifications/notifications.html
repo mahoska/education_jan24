@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-04-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="Notifications Demo">
+        <div class="slds-m-around_medium">
+           <lightning-button variant="success" label="Success" onclick={toastHandler}></lightning-button>
+           <lightning-button variant="destructive" label="Error" onclick={toastHandlerErr}></lightning-button>
+           <lightning-button variant="brand" label="Warning" onclick={toastHandlerWarn}></lightning-button>
+           <lightning-button variant="neutral" label="Info" onclick={toastHandlerInfo}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

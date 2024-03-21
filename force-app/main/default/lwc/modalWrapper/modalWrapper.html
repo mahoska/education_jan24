@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-13-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="Modal Component">
+        <div class="slds-p-around_medium">
+            <lightning-button variant="brand" label="open" onclick={openHandler}></lightning-button>
+            <lightning-button variant="brand" label="open second" onclick={openSecondHandler}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <template lwc:if={isOpen}>
+        <c-modal onclose={closeHandler}>
+            <!--<h1 slot="title">Modal header</h1>-->
+            <p>Some info in body</p>
+           <!--div slot="footer">
+                <button class="slds-button slds-button_neutral" onclick={closeHandler}>Cancel</button>
+                <button class="slds-button slds-button_brand" >Save</button>
+            </div>-->
+        </c-modal>
+    </template>
+
+    <template lwc:if={isOpenSecond}>
+        <c-modal onclose={closeSecondHandler}>
+            <h1 slot="title">Second Modal header</h1>
+            <p>Hello from second modal</p>
+           <div slot="footer">
+                <button class="slds-button slds-button_neutral" onclick={closeSecondHandler}>Cancel</button>
+                <button class="slds-button slds-button_brand" >Save</button>
+            </div>
+        </c-modal>
+    </template>
+</template>

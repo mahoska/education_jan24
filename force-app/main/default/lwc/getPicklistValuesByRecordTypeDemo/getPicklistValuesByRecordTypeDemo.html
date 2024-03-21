@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-07-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="getPicklistValues by recordTypeId ">
+            <div class="slds-p-around_medium">
+                <template lwc:if={ratingOptions}>
+                    <lightning-combobox
+                        name="rating"
+                        label="Rating"
+                        value={selectedRating}
+                        placeholder="Select Reting"
+                        options={ratingOptions}
+                        onchange={handleChange} >
+                    </lightning-combobox>
+                    <p>selectedRating: {selectedRating}</p>
+                </template>
+
+                <template lwc:if={industryOptions}>
+                    <lightning-combobox
+                    name="industry"
+                    label="Industry"
+                    value={selectedIndustry}
+                    placeholder="Select Industry"
+                    options={industryOptions}
+                    onchange={handleChange} ></lightning-combobox>
+                    <p>selectedIndustry: {selectedIndustry}</p>
+                </template>
+            </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-19-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="getRelatedListRecords Demo">
+        <div class="slds-var-p-around_medium">
+            <template lwc:if={recordsList}>
+                <template for:each={recordsList.records} for:item="record">
+                    <p key={record.fields.Id.value}>{record.fields.Name.value}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

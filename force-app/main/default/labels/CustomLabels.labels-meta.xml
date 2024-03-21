@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>descriptionOne</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>descriptionOne</shortDescription>
+        <value>Affordable Access: Gain full access to Salesforce Marketing Cloud for three months at a fraction of the usual cost. We believe in making learning opportunities accessible to everyone, ensuring that financial constraints never stand in the way of your professional growth.</value>
+    </labels>
+    <labels>
+        <fullName>descriptionTwo</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>descriptionTwo</shortDescription>
+        <value>Real-world Experience: Explore the platform as if you were working in a live environment. Our course allows you to dive into the Salesforce Marketing Cloud, giving you a genuine feel for the tools, processes, and functionalities used in the industry.</value>
+    </labels>
+</CustomLabels>

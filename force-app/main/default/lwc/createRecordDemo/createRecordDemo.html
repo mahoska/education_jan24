@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-08-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="create record form  demo">
+        <div class="slds-p-around_medium">
+            <form class="createForm">
+                <lightning-input label="First Name"  name="FirstName" onchange={changeHandler} class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Last Name"  name="LastName" onchange={changeHandler} class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Title"  name="Title" onchange={changeHandler} class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Phone"  name="Phone" type="tel" onchange={changeHandler} class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Email"  name="Email" type="email" onchange={changeHandler} class="slds-m-bottom_x-small"></lightning-input>
+            <lightning-button label="Create Account" variant="brand" onclick={createContact}></lightning-button>
+            </form>
+        </div>
+        </lightning-card>
+</template>

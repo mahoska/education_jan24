@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-06-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <lightning-card title="Lightning record view form">
+        <lightning-record-view-form
+            object-api-name="Account"
+            record-id="001av000000LgM3AAK"
+        >
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="Phone"></lightning-output-field>
+                    <lightning-output-field field-name="Industry"></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name="AnnualRevenue"></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>
