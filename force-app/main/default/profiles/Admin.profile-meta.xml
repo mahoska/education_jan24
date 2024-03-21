@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-        <applicationVisibilities>
+        
     <applicationVisibilities>
         <application>CAR_HUB</application>
         <default>false</default>
@@ -58,12 +58,13 @@
     <classAccesses>
         <apexClass>refreshContractController</apexClass>
         <enabled>true</enabled>
-    </classAccesses>
-    <custom>false</custom>
-        <layoutAssignments>
+    </classAccesses>  
+    <layoutAssignments>
         <layout>Opportunity-Opportunity Layout</layout>
+    </layoutAssignments>  
+    <layoutAssignments>
+        <layout>Car__c-Car Layout</layout>
     </layoutAssignments>
-        <pageAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Car__c.Description__c</field>
@@ -74,9 +75,7 @@
         <field>Car__c.Fuel_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <layoutAssignments>
-        <layout>Car__c-Car Layout</layout>
-    </layoutAssignments>
+   
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -750,10 +749,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
