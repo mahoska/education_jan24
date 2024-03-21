@@ -76,6 +76,7 @@
     <tabs>Charts_in_LWC</tabs>
     <tabs>Reusable_Components</tabs>
     <tabs>Custom_Carousel_Using_LWC</tabs>
+    <tabs>Last_Features</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Zero_To_Hero_UtilityBar</utilityBar>
 </CustomApplication>

@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-19-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+<lightning-card title="getRelatedListInfo Demo">
+    <div class="slds-var-p-around_medium">
+        <template lwc:if={relatedData}>
+            <h1><strong>Related List on Account</strong></h1>
+            <template for:each={relatedData}  for:item="list">
+                <p key={list.label}>{list.label}</p>
+            </template>
+        </template>
+    </div>
+</lightning-card>
+</template>

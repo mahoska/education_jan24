@@ -30,6 +30,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>RefreshController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>pdfController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -42,10 +46,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
-    <layoutAssignments>
+        <layoutAssignments>
         <layout>Opportunity-Opportunity Layout</layout>
     </layoutAssignments>
-    <pageAccesses>
+        <pageAccesses>
         <apexPage>lmsVisualForceDemo</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -95,6 +99,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>LWC_in_Tab</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Last_Features</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
