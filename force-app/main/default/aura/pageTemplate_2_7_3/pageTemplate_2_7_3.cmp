@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 03-14-2024
+  @last modified by  : Hanna Makhovska
+-->
+<aura:component 
+implements="lightning:appHomeTemplate"
+description="Three Column layout"
+access="global">
+<aura:attribute name="left" type="Aura.Component[]" access="global"/>
+<aura:attribute name="center" type="Aura.Component[]" access="global"/>
+<aura:attribute name="right" type="Aura.Component[]" access="global"/>
+
+<div aura:id="container">
+    <lightning:layout>
+        <lightning:layoutItem aura:id="leftColunn" size="2">
+          {!v.left}
+        </lightning:layoutItem>
+        <lightning:layoutItem aura:id="centerColunn" size="7" class="center">
+            {!v.center}
+        </lightning:layoutItem>
+        <lightning:layoutItem aura:id="rightColunn" size="3">
+            {!v.right}
+        </lightning:layoutItem>
+    </lightning:layout>
+</div>
+</aura:component>	

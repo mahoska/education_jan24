@@ -33,8 +33,13 @@
         <name>StaticResource</name>
     </types>
     <types>
+<<<<<<< HEAD
         <members>*</members>
         <name>LightningMessageChannel</name>
+=======
+    <members>*</members>
+    <name>LightningMessageChannel</name>
+>>>>>>> carHubProject
     </types>
     <version>59.0</version>
 </Package>
