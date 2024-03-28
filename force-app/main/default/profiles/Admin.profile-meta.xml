@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-        
     <applicationVisibilities>
         <application>CAR_HUB</application>
         <default>false</default>
@@ -15,11 +14,11 @@
         <apexClass>AccountContact</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
+<classAccesses>
         <apexClass>AccountController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-        <classAccesses>
+    <classAccesses>
         <apexClass>AccountController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -58,13 +57,13 @@
     <classAccesses>
         <apexClass>refreshContractController</apexClass>
         <enabled>true</enabled>
-    </classAccesses>  
-    <layoutAssignments>
-        <layout>Opportunity-Opportunity Layout</layout>
-    </layoutAssignments>  
-    <layoutAssignments>
-        <layout>Car__c-Car Layout</layout>
-    </layoutAssignments>
+    </classAccesses>
+    <custom>false</custom>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Avg_Case_Resolution_Days__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>Car__c.Description__c</field>
@@ -75,7 +74,20 @@
         <field>Car__c.Fuel_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Profile__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Car__c-Car Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Opportunity Layout</layout>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -750,7 +762,7 @@
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
     </userPermissions>
-    <userPermissions>
+        <userPermissions>
         <enabled>true</enabled>
         <name>SendSitRequests</name>
     </userPermissions>
