@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Hanna Makhovska
  * @group             : 
- * @last modified on  : 03-29-2024
+ * @last modified on  : 03-30-2024
  * @last modified by  : Hanna Makhovska
 **/
 public with sharing class CTLocationTracingController {
@@ -21,7 +21,7 @@ public with sharing class CTLocationTracingController {
      * @param personIds
      * @return List<Location_Tracing__c>
     */
-    public static List<Location_Tracing__c> getLocationsByPerson(Set<Id> personIds){
+    public static List<Location_Tracing__c> getLocationsByPersonIds(Set<Id> personIds){
         return [SELECT Id, Person__c,  Location__c 
         FROM Location_Tracing__c 
         WHERE  Person__c IN :personIds AND  Visit_Date__c = LAST_N_DAYS:10];
