@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <applicationVisibilities>
+<applicationVisibilities>
         <application>CAR_HUB</application>
         <default>false</default>
         <visible>true</visible>
@@ -144,7 +144,7 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
-    <fieldPermissions>
+<fieldPermissions>
         <editable>true</editable>
         <field>Account.Active_Contacts__c</field>
         <readable>true</readable>
@@ -420,6 +420,10 @@
         <enabled>true</enabled>
         <name>AddDirectMessageMembers</name>
     </userPermissions>
+    <!--userPermissions>
+        <enabled>true</enabled>
+        <name>AllowObjectDetectionTraining</name>
+    </userPermissions-->
     <userPermissions>
         <enabled>true</enabled>
         <name>AllowUniversalSearch</name>
@@ -540,6 +544,10 @@
         <enabled>true</enabled>
         <name>CreateLtngTempFolder</name>
     </userPermissions>
+    <!--userPermissions>
+        <enabled>true</enabled>
+        <name>CreatePackaging</name>
+    </userPermissions-->
     <userPermissions>
         <enabled>true</enabled>
         <name>CreateReportFolders</name>
@@ -548,7 +556,7 @@
         <enabled>true</enabled>
         <name>CreateTopics</name>
     </userPermissions>
-        <userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>CreateWorkspaces</name>
     </userPermissions>
@@ -660,7 +668,7 @@
         <enabled>true</enabled>
         <name>ExportReport</name>
     </userPermissions>
-        <userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>GiveRecognitionBadge</name>
     </userPermissions>
@@ -936,10 +944,18 @@
         <enabled>true</enabled>
         <name>Packaging2Delete</name>
     </userPermissions>
+    <!--userPermissions>
+        <enabled>true</enabled>
+        <name>Packaging2PromoteVersion</name>
+    </userPermissions-->
     <userPermissions>
         <enabled>true</enabled>
         <name>PrivacyDataAccess</name>
     </userPermissions>
+    <!--userPermissions>
+        <enabled>true</enabled>
+        <name>PublishPackaging</name>
+    </userPermissions-->
     <userPermissions>
         <enabled>true</enabled>
         <name>RemoveDirectMessageMembers</name>
@@ -964,7 +980,7 @@
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
     </userPermissions>
-        <userPermissions>
+    <userPermissions>
         <enabled>true</enabled>
         <name>SendSitRequests</name>
     </userPermissions>
@@ -1028,10 +1044,22 @@
         <enabled>true</enabled>
         <name>TransferAnyLead</name>
     </userPermissions>
+    <!--
+        <enabled>true</enabled>
+        <name>UseFulfillmentAPIs</name>
+    </userPermissions-->
     <userPermissions>
         <enabled>true</enabled>
         <name>UseOmnichannelInventoryAPIs</name>
     </userPermissions>
+    <!--userPermissions>
+        <enabled>true</enabled>
+        <name>UseReturnOrder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UseReturnOrderAPIs</name>
+    </userPermissions-->
     <userPermissions>
         <enabled>true</enabled>
         <name>UseTeamReassignWizards</name>
