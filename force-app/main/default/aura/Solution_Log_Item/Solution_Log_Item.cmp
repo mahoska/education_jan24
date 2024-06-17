@@ -1,0 +1,232 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 05-16-2024
+  @last modified by  : Hanna Makhovska
+-->
+<aura:component controller="SolutionLogController">
+    <aura:attribute name="log" type="Solutions_Log__c"/>
+    <aura:attribute name="recordType" type="String"/>
+    <aura:attribute name="arrowClass" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <article class="slds-setup-assistant__step">
+        <div class="slds-setup-assistant__step-summary">
+            <!--<div class="slds-media">-->
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_9-of-12 ">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12">
+                            <aura:if isTrue="{!v.log.Status__c=='New'}">
+                                <lightning:icon iconName="standard:custom" alternativeText="New"/>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!v.log.Status__c=='Watching'}">
+                                        <lightning:icon iconName="standard:search" alternativeText="Watching"/>
+                                        <aura:set attribute="else">
+                                            <aura:if isTrue="{!v.log.Status__c=='Resolved'}">
+                                                <lightning:icon iconName="standard:task2" alternativeText="Resolved"/>
+                                                <aura:set attribute="else">
+                                                    <lightning:icon iconName="standard:unmatched"
+                                                                    alternativeText="Without Status"/>
+                                                </aura:set>
+                                            </aura:if>
+                                        </aura:set>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                        <aura:if isTrue="{!v.recordType != 'batch'}">
+                            <div class="slds-col slds-size_11-of-12 bold">
+                                    {!v.log.Message__c}
+                            </div>
+                            <div class="slds-col slds-size_12-of-12">
+                                <div class="slds-m-top--medium">Details:</div>
+                                <div class="slds-p-left--large">
+                                    <dl>
+                                        <dt>Stack Trace:</dt>
+                                        <dd class="slds-p-left--large">Class.{!v.log.Classes__c}.{!v.log.Method__c}:
+                                            line:{!v.log.Line__c}</dd>
+                                        <dt>Comment:</dt>
+                                        <dd class="slds-p-left--large">
+                                                {!v.log.Comment__c}
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+                                <div class="slds-col slds-size_11-of-12">
+                                    <table class="slds-table slds-max-medium-table_stacked-horizontal">
+                                        <tr class="slds-hint-parent ">
+                                            <td>
+                                                <div class="slds-truncate">total Not Prepared Emails Size</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">{!v.log.Body__c.totalNotPreparedEmailsSize}</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <td>
+                                                <div class="slds-truncate">total Observation Size</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">{!v.log.Body__c.totalObservationSize}</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <td>
+                                                <div class="slds-truncate">total Prepared Emails Size</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">{!v.log.Body__c.totalPreparedEmailsSize}</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <td>
+                                                <div class="slds-truncate">total Products Size</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">{!v.log.Body__c.totalProductsSize}</div>
+                                            </td>
+                                        </tr>
+                                        <!--<tr class="slds-hint-parent">-->
+                                            <!--<td>-->
+                                                <!--<div class="slds-truncate">batch Info List</div>-->
+                                            <!--</td>-->
+                                            <!--<td>-->
+                                                <!--<aura:if isTrue="{!v.log.Body__c.batchInfoList.length>0}">-->
+                                                    <!--<lightning:button variant="brand" aura:id="{!v.log.Id}"-->
+                                                                      <!--name="{!v.log.Id}"-->
+                                                                      <!--label="Show List"-->
+                                                                      <!--onclick="{! c.showBatchInfoList }"/>-->
+                                                <!--</aura:if>-->
+                                            <!--</td>-->
+                                        <!--</tr>-->
+                                        <tr class="slds-hint-parent">
+                                            <td></td>
+                                            <td>
+                                                <ol type="none"  class="slds-hide" id="{!'bl'+v.log.Id}">
+                                                    <aura:iteration items="{!v.log.Body__c.batchInfoList}" var="batchInfoItem">
+                                                        <div class="slds-m-bottom--small slds-text-align--left">
+                                                            <li>
+                                                                <div class="gray inline">recordType : </div>
+                                                                <div class="inline">{!batchInfoItem.recordType}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">productPayoff :</div>
+                                                                <div class="inline">{!batchInfoItem.productPayoff}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">productName :</div>
+                                                                <div class="inline">{!batchInfoItem.productName}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">productEmailsSize :</div>
+                                                                <div class="inline">{!batchInfoItem.productEmailsSize}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">observationsToUpdate :</div>
+                                                                <div class="inline">{!batchInfoItem.observationsToUpdate}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">nextObservation :</div>
+                                                                <div class="inline">{!batchInfoItem.nextObservation}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">isSetContainsProduct :</div>
+                                                                <div class="inline">{!batchInfoItem.isSetContainsProduct}</div>
+                                                            </li>
+                                                        </div>
+                                                    </aura:iteration>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                        <!-- //INT-375 add update errors-->
+                                        <tr class="slds-hint-parent">
+                                            <td>
+                                                <div class="slds-truncate">butch update errors</div>
+                                            </td>
+                                            <td>
+                                                <aura:if isTrue="{!v.log.Body__c.batchErrorResult.length>0}">
+                                                    <lightning:button variant="brand" aura:id="{!v.log.Id}"
+                                                                      name="{!v.log.Id}"
+                                                                      label="Show Errors"
+                                                                      onclick="{! c.showBatchErrorsList }"/>
+                                                    <aura:set attribute="else">
+                                                        <div class="slds-text-color_success">no errors occurred</div>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </td>
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <td></td>
+                                            <td>
+                                                <ol type="none"  class="slds-hide" id="{!'blr'+v.log.Id}">
+                                                    <aura:iteration items="{!v.log.Body__c.batchErrorResult}" var="batchErrorResult">
+                                                        <div class="slds-m-bottom--small slds-text-align--left">
+                                                            <li>
+                                                                <div class="gray inline">Error message : </div>
+                                                                <div class="inline">{!batchErrorResult.errorMessage}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">Error fields : </div>
+                                                                <div class="inline">{!batchErrorResult.errorFields}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">Error object type : </div>
+                                                                <div class="inline">{!batchErrorResult.errorObjectType}</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="gray inline">Error record Id : </div>
+                                                                <div class="inline">{!batchErrorResult.errorObjectId}</div>
+                                                            </li>
+                                                        </div>
+                                                    </aura:iteration>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_3-of-12 right-section">
+                    <p style="text-align: right" class="{!v.arrowClass}" id="prioritySpan">
+                        <aura:if isTrue="{!v.log.Priority__c=='Low'}">
+                            &darr;
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!or(v.log.Priority__c=='Medium',v.log.Priority__c=='High')}">
+                                    &uarr;
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                            {!v.log.Priority__c}
+                    </p>
+
+                    <p class="slds-text-align_right slds-text-color_weak slds-p-top_medium">
+                        <lightning:formattedDateTime value="{!v.log.CreatedDate}" hour="2-digit" minute="2-digit" hour12="true"/>&nbsp;
+                        <lightning:formattedDateTime value="{!v.log.CreatedDate}"/>
+                    </p>
+
+                    <lightning:select aura:id="selectForStatus" label="Status" required="true"
+                                      onchange="{!c.changeStatus}" class="slds-p-top_medium">
+                        <option value="New" selected="{!v.log.Status__c=='New'}">New</option>
+                        <option value="Watching" selected="{!v.log.Status__c=='Watching'}">Watching</option>
+                        <option value="Resolved" selected="{!v.log.Status__c=='Resolved'}">Resolved</option>
+                        <option value="" selected="{!v.log.Status__c==null}">Not Determined</option>
+                    </lightning:select>
+
+                    <lightning:select aura:id="selectForPriority" label="Priority" required="true"
+                                      onchange="{!c.changePriority}" class="slds-p-top_medium">
+                        <option value="High" selected="{!v.log.Priority__c=='High'}">High</option>
+                        <option value="Medium" selected="{!v.log.Priority__c=='Medium'}">Medium</option>
+                        <option value="Low" selected="{!v.log.Priority__c=='Low'}">Low</option>
+                        <option value="" selected="{!v.log.Priority__c==null}">Not Determined</option>
+                    </lightning:select>
+                </div>
+            </div>
+        </div>
+    </article>
+</aura:component>

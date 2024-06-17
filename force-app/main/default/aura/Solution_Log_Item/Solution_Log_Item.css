@@ -1,0 +1,48 @@
+.THIS .bold{
+    font-weight: bold;
+}
+
+.THIS .gray{
+    color: #969492;
+}
+
+.THIS .inline{
+    display: inline;
+}
+
+.THIS .darkgray{
+    color: #514f4d;
+}
+
+.THIS .red{
+    color: red;
+    font-weight:bold;
+    font-size: large;
+}
+
+.THIS .orange{
+    color: orange;
+    font-weight:bold;
+    font-size: large;
+}
+
+.THIS .green{
+    color: green;
+    font-weight:bold;
+    font-size: large;
+}
+
+@media all and (max-width: 980px) {
+    .THIS .right-section {
+        margin-top: 20px;
+    }
+
+    .THIS .slds-p-left--large{
+        padding-left: 10px !important;
+        text-align: justify;
+    }
+
+    .THIS .inline{
+        display: block;
+    }
+}

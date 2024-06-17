@@ -1,0 +1,108 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 05-16-2024
+  @last modified by  : Hanna Makhovska
+-->
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="priority" type="String" default=""/>
+    <aura:attribute name="status" type="String" default=""/>
+    <aura:attribute name="val" type="Integer" default="0"/>
+    <aura:attribute name="timeLine" type="String" default="Today"/>
+    <aura:attribute name="toggleVal" type="Boolean" default="true"/>
+    <aura:attribute name="startDate" type="String" default=""/>
+    <aura:attribute name="stopDate" type="String" default=""/>
+    <aura:attribute name="showErrorDateDuration" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessageDateDuration" type="String" default=""/>
+
+    <div class="slds-grid slds-wrap slds-gutters">
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 slds-large-size_3-of-12 slds-m-top_medium">
+            <article class="slds-card">
+                <div class="slds-card__body slds-m-around_medium">
+                    <div class="slds-form slds-form_stacked">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <lightning:select aura:id="selectFilterPriority" label="Priority" value="{!v.priority}">
+                                    <option value="">select priority</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </lightning:select>
+
+                                <lightning:select aura:id="selectFilterStatus" label="Status" value="{!v.status}">
+                                    <option value="">select status</option>
+                                    <option value="New">New</option>
+                                    <option value="Watching">Watching</option>
+                                    <option value="Resolved">Resolved</option>
+                                </lightning:select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="slds-card">
+                <div class="slds-card__body slds-m-around_medium">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_6-of-12"></div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <lightning:input type="toggle"
+                                             label="Date filter"
+                                             name="input2"
+                                             checked="{!v.toggleVal}"
+                                             messageToggleActive="Time line"
+                                             messageToggleInactive="Duration"
+                                             onchange="{!c.changeToggle}"/>
+                        </div>
+                        <div class="slds-col slds-size_12-of-12">
+                            <div id="timeLineWrapper" class="">
+                                <lightning:slider label="Time Line" value="{!v.val}" step="50"
+                                                  onchange="{! c.changeSliderTimeLine }"/>
+                                <div class="slds-text-align_center">
+                                    <div class="slds-m-top--medium">{!v.timeLine}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="durationWrapper" class="slds-hide">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_12-of-12 slds-m-top--medium">
+                                    Duration
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <ui:inputDate aura:id="dateField" label="" value="{!v.startDate}"
+                                                  displayDatePicker="true" format="dd/MM/yyyy"/>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <ui:inputDate aura:id="dateField" label="" value="{!v.stopDate}"
+                                                  displayDatePicker="true" format="dd/MM/yyyy"/>
+                                </div>
+                                <aura:if isTrue="{!v.showErrorDateDuration}">
+                                    <div class="slds-col slds-size_12-of-12 slds-m-top--small slds-text-align_center  slds-text-color--error">
+                                            {!v.errorMessageDateDuration}
+                                    </div>
+                                </aura:if>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_8-of-12 slds-large-size_9-of-12 slds-m-top_medium">
+            <article class="slds-card">
+                <div class="slds-card__body">
+                    <c:Solutions_Log_Tab priority="{!v.priority}"
+                                             status="{!v.status}"
+                                             timeLine="{!v.timeLine}"
+                                             startDate="{!v.startDate}"
+                                             stopDate="{!v.stopDate}"
+                                             showErrorDateDuration="{!v.showErrorDateDuration}"
+                                             errorMessageDateDuration="{!v.errorMessageDateDuration}"
+                                             toggleVal="{!v.toggleVal}"
+                    />
+                </div>
+            </article>
+        </div>
+    </div>
+</aura:component>

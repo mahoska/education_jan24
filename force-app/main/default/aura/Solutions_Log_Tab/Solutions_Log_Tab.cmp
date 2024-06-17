@@ -1,0 +1,56 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 05-16-2024
+  @last modified by  : Hanna Makhovska
+-->
+<aura:component  description="Log Monitoring">
+
+    <aura:attribute name="priority" type="String"/>
+    <aura:attribute name="status" type="String"/>
+    <aura:attribute name="timeLine" type="String"/>
+    <aura:attribute name="startDate" type="String" />
+    <aura:attribute name="stopDate" type="String" />
+    <aura:attribute name="showErrorDateDuration" type="Boolean" />
+    <aura:attribute name="toggleVal" type="Boolean" default="true" />
+    <aura:attribute name="errorMessageDateDuration" type="String" />
+
+    <div class="slds-grid slds-wrap" padding="around-small">
+        <lightning:tabset  class="slds-p-around--medium" variant="scoped" selectedTabId="info">
+            <lightning:tab label="Error" id="error">
+                <c:Solutions_Log_TabItem  priority="{!v.priority}"
+                                              status="{!v.status}"
+                                              timeLine="{!v.timeLine}"
+                                              startDate="{!v.startDate}"
+                                              stopDate="{!v.stopDate}"
+                                              showErrorDateDuration="{!v.showErrorDateDuration}"
+                                              errorMessageDateDuration="{!v.errorMessageDateDuration}"
+                                              toggleVal = "{!v.toggleVal}"
+                                              recordTypeFlag="error"/>
+            </lightning:tab>
+            <lightning:tab label="Info" id="info">
+                <c:Solutions_Log_TabItem   priority="{!v.priority}"
+                                               status="{!v.status}"
+                                               timeLine="{!v.timeLine}"
+                                               startDate="{!v.startDate}"
+                                               stopDate="{!v.stopDate}"
+                                               showErrorDateDuration="{!v.showErrorDateDuration}"
+                                               errorMessageDateDuration="{!v.errorMessageDateDuration}"
+                                               toggleVal = "{!v.toggleVal}"
+                                               recordTypeFlag="info"/>
+            </lightning:tab>
+            <lightning:tab label="Batch" id="batch">
+                <c:Solutions_Log_TabItem   priority="{!v.priority}"
+                                               status="{!v.status}"
+                                               timeLine="{!v.timeLine}"
+                                               startDate="{!v.startDate}"
+                                               stopDate="{!v.stopDate}"
+                                               showErrorDateDuration="{!v.showErrorDateDuration}"
+                                               errorMessageDateDuration="{!v.errorMessageDateDuration}"
+                                               toggleVal = "{!v.toggleVal}"
+                                               recordTypeFlag="batch"/>
+            </lightning:tab>
+        </lightning:tabset>
+    </div>
+</aura:component>

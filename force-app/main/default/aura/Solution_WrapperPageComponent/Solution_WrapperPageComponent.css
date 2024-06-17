@@ -1,0 +1,7 @@
+.THIS .slds-slider__value, .THIS .slds-slider-label__range{
+    display: none !important;
+}
+
+.THIS .slds-slider-label__label{
+    margin-bottom: 10px;
+}

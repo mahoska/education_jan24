@@ -1,0 +1,41 @@
+<!--
+*  Created by amakhovskaya on 31/10/2018
+*	@description: for INT-180
+-->
+<aura:component  description="Item component to Solution_Log_Tab component"
+                 controller="SolutionLogController">
+	<aura:attribute name="recordTypeFlag" type="String"/>
+    <aura:attribute name="logsData" type="List"/>
+    <aura:attribute name="isShow" type="Boolean"/>
+
+    <aura:attribute name="priority" type="String"/>
+    <aura:attribute name="status" type="String"/>
+    <aura:attribute name="timeLine" type="String"/>
+    <aura:attribute name="startDate" type="String"/>
+    <aura:attribute name="stopDate" type="String"/>
+    <aura:attribute name="toggleVal" type="Boolean" default="true" />
+    <aura:attribute name="showErrorDateDuration" type="Boolean" />
+    <aura:attribute name="errorMessageDateDuration" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.priority}" action="{!c.changePriority}" />
+    <aura:handler name="change" value="{!v.status}" action="{!c.changeStatus}" />
+    <aura:handler name="change" value="{!v.timeLine}" action="{!c.changeTimeLine}" />
+    <aura:handler name="change" value="{!v.startDate}" action="{!c.changeDuration}" />
+    <aura:handler name="change" value="{!v.stopDate}" action="{!c.changeDuration}" />
+    <aura:handler name="change" value="{!v.showErrorDateDuration}" action="{!c.changeDuration}" />
+
+    <lightning:spinner variant="brand" size="large" aura:id="spinner" class="slds-hide" alternativeText="spinner"/>
+    <aura:if isTrue="{!v.isShow}">
+        <ol class="slds-setup-assistant">
+            <aura:iteration items="{!v.logsData}" var="log">
+                <li class="slds-setup-assistant__item">
+                    <c:Solution_Log_Item log="{!log}" recordType="{!v.recordTypeFlag}"/>
+                </li>
+            </aura:iteration>
+        </ol>
+        <aura:set attribute="else">
+            <div>no data was found for your request</div>
+        </aura:set>
+    </aura:if>
+</aura:component>
