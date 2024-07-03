@@ -1,0 +1,53 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 06-19-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <div class="banner" style={bannerImage}>
+        <div class="main-details">
+            <section class="social">
+                <a href={facebookUrl} target="_blank" lwc:if={facebookUrl}>
+                    <img src={facebookImage} alt="facebook"/>
+                </a>
+                <a href={twitterUrl} target="_blank" lwc:if={twitterUrl}>
+                    <img src={twitterImage} alt="twitter"/>
+                </a>
+                <a href={instagramUrl} target="_blank" lwc:if={instagramUrl}>
+                    <img src={instagramImage} alt="instagram"/>
+                </a>
+            </section>
+            <section class="event-info">
+                <p>{invitationDetails.Greeting_Message__c}</p>
+                <h1>{invitationDetails.Event_Introduction__c}
+                    <em>{invitationDetails.Event_Participants__c}</em>
+                </h1>
+                <h4>
+                    <lightning-formatted-date-time
+                    value={invitationDetails.Event_Date_And_Time__c}
+                    year="numeric"
+                    day="2-digit"
+                    month="long"
+                    hour="2-digit"
+                    minutes="2-digit"></lightning-formatted-date-time>
+                </h4>
+            </section>
+            <section class="countdown">
+                <div class="counter">
+                    <div>{days}</div>days
+                </div>
+                <div class="counter">
+                    <div>{hours}</div>hours
+                </div>
+                <div class="counter">
+                    <div>{minutes}</div>minutes
+                </div>
+                <div class="counter">
+                    <div>{seconds}</div>seconds
+                </div>
+            </section>
+        </div>
+    </div>
+</template>

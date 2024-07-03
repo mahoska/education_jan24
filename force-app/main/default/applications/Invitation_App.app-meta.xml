@@ -13,6 +13,7 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Invitation App</label>
     <navType>Standard</navType>
+    <tabs>Invitation__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Invitation_App_UtilityBar</utilityBar>
 </CustomApplication>
