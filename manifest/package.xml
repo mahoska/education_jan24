@@ -36,5 +36,29 @@
         <members>*</members>
         <name>LightningMessageChannel</name>
     </types>
+     <types>
+        <members>*</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ExperienceBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
     <version>59.0</version>
 </Package>
