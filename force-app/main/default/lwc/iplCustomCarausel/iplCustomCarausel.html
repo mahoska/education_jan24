@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Hanna Makhovska
+  @group             : 
+  @last modified on  : 07-12-2024
+  @last modified by  : Hanna Makhovska
+-->
+<template>
+    <div class="slds-carousel">
+        <div class="slds-carousel__stage">
+            <div class="slds-carousel__panels" style={carouselPanelsStyle}>
+                <template for:each={carouselList} for:item="item">
+                    <div class="slds-carousel__panel" role="tabpanel" key={item.year}>
+                        <div class="slds-carousel__image">
+                            <img src={item.url} alt={item.altText} />
+                        </div>
+                    </div>
+                </template>
+               
+            </div>
+        </div>
+    </div>
+</template>
