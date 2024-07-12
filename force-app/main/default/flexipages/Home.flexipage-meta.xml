@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>iplBanner</componentName>
+                <identifier>c_iplBanner</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>top</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>iplAllTimeLeaders</componentName>
+                <identifier>c_iplAllTimeLeaders</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>bottomLeft</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>iplAllTimeLeadersByCategory</componentName>
+                <identifier>c_iplAllTimeLeadersByCategory</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>bottomRight</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>iplTopPerformances</componentName>
+                <identifier>c_iplTopPerformances</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
