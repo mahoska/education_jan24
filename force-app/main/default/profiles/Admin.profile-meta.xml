@@ -64,10 +64,6 @@
         <apexClass>refreshContractController</apexClass>
         <enabled>true</enabled>
     </classAccesses> 
-    <classAccesses>
-        <apexClass>iplController </apexClass>
-        <enabled>true</enabled>
-    </classAccesses> 
     <layoutAssignments>
         <layout>Opportunity-Opportunity Layout</layout>
     </layoutAssignments>  
@@ -104,10 +100,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>renderAsPDF</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Home</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <tabVisibilities>
